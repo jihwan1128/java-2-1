@@ -1,4 +1,9 @@
-# Compiled class file
+#주석
+note/
+test.java
+.gitignore
+
+ Compiled class file
 *.class
 
 # Log file
