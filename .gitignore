@@ -3,7 +3,7 @@ note/
 test.java
 .gitignore
 
- Compiled class file
+#Compiled class file
 *.class
 
 # Log file
