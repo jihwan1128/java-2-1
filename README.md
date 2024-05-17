@@ -1,6 +1,54 @@
 
 # 유지환 <h1>202130221
 
+## 5월 17일 강의
+
+##### 컨테이너의 배치관리자
+- 컨테이너마다 하나의 배치관리자 존재
+- 컨테이너에 부착되는 컴포넌트의 위치와 크기 결정
+- 컨테이너의 크기가 변경되면, 컴포넌트의 위치와 크기 재결정
+
+##### 배치 관리자 대표 유형 4가지
+- FlowLayout 배치관리자
+     컴포넌트가삽입되는순서대로왼쪽에서오른쪽으로배치
+     배치할공간이없으면아래로내려와서반복한다.
+- BorderLayout 배치관리자
+     컨테이너의공간을동(EAST), 서(WEST), 남(SOUTH), 북(NORTH), 
+     중앙(CENTER)의 5개 영역으로나눔
+     5개영역중응용프로그램에서지정한영역에컴포넌트배치
+- GridLayout 배치관리자
+     컨테이너를프로그램에서설정한동일한크기의2차원격자로나눔
+     컴포넌트는삽입순서대로좌에서우로, 다시위에서아래로배치
+- CardLayout
+     컨테이너의공간에카드를쌓아놓은듯이컴포넌트를포개어배치
+
+##### BorderLayout 생성자와 add() 메소드
+- 생성자
+   BorderLayout()
+   BorderLayout(int hGap, int vGap)
+     - hGap : 좌우 두 컴포넌트사이의수평간격, 픽셀단위(디폴트: 0)
+     - vGap : 상하 두 컴포넌트사이의수직간격, 픽셀단위(디폴트: 0)
+
+- add() 메소드
+      void add(Component comp, int index)
+      - comp 컴포넌트를 index 위치에 삽입한다.
+      - index : 컴포넌트의 위치
+                동: BorderLayout.EAST
+                서: BorderLayout.WEST 
+                남: BorderLayout.SOUTH 북 : BorderLayout.NORTH
+                중앙: BorderLayout.CENTER
+
+##### GridLayout 생성자
+- 생성자
+  - GridLayout()
+  - GridLayout(int rows, int cols)
+  - GridLayout(int rows, int cols, int hGap, int vGap)
+         rows : 격자의 행수 (디폴트 : 1)
+         cols : 격자의 열수 (디폴트 : 1)
+         hGap : 좌우 두 컴포넌트사이의수평간격, 픽셀단위(디폴트: 0)
+         vGap : 상하 두 컴포넌트사이의수직간격, 픽셀단위(디폴트: 0)
+         rows x cols 만큼의 셀을 가진 격자로 컨테이너 공간을분할, 배치
+    
 ## 3월 15일 Java2  강의
 깃 허브 주소를 복사하여 vscode에 붙여넣고 깃허브를 쓰는법을 배웠다.
 source control 에서 내용을 넣고 comit을 하고 업로드하면 깃허브 주소에 vscode에서 작성한 내용이 올라간다.
